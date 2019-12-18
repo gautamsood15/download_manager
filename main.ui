@@ -110,7 +110,17 @@
        </rect>
       </property>
       <property name="text">
-       <string>B</string>
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="photo.qrc">
+        <normaloff>:/icons/browse_icon.png</normaloff>:/icons/browse_icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>26</width>
+        <height>26</height>
+       </size>
       </property>
      </widget>
      <widget class="QLabel" name="label">
@@ -211,7 +221,17 @@
          </rect>
         </property>
         <property name="text">
-         <string>B</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="photo.qrc">
+          <normaloff>:/icons/browse_icon.png</normaloff>:/icons/browse_icon.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
         </property>
        </widget>
        <widget class="QProgressBar" name="progressBar_2">
@@ -256,7 +276,17 @@
          </rect>
         </property>
         <property name="text">
-         <string>G</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="photo.qrc">
+          <normaloff>:/icons/save_icon.png</normaloff>:/icons/save_icon.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
         </property>
        </widget>
        <widget class="QLabel" name="label_2">
@@ -354,7 +384,17 @@
          </rect>
         </property>
         <property name="text">
-         <string>B</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="photo.qrc">
+          <normaloff>:/icons/browse_icon.png</normaloff>:/icons/browse_icon.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
         </property>
        </widget>
        <widget class="QPushButton" name="pushButton_8">
@@ -480,6 +520,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="photo.qrc"/>
+ </resources>
  <connections/>
 </ui>
