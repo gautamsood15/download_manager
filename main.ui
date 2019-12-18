@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -84,7 +84,7 @@
        </font>
       </property>
       <property name="placeholderText">
-       <string>Enter Save Location</string>
+       <string>Select Save Location</string>
       </property>
      </widget>
      <widget class="QProgressBar" name="progressBar">
@@ -157,7 +157,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -198,7 +198,7 @@
          </font>
         </property>
         <property name="placeholderText">
-         <string>Enter Save Location</string>
+         <string>Select Save Location</string>
         </property>
        </widget>
        <widget class="QPushButton" name="pushButton_3">
@@ -328,7 +328,7 @@
          </font>
         </property>
         <property name="placeholderText">
-         <string>Enter Save Location</string>
+         <string>Select Save Location</string>
         </property>
        </widget>
        <widget class="QProgressBar" name="progressBar_3">
