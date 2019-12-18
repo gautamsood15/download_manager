@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -48,7 +48,7 @@
        <rect>
         <x>90</x>
         <y>19</y>
-        <width>591</width>
+        <width>581</width>
         <height>31</height>
        </rect>
       </property>
@@ -98,14 +98,24 @@
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>90</x>
+        <x>260</x>
         <y>110</y>
-        <width>81</width>
+        <width>101</width>
         <height>21</height>
        </rect>
       </property>
       <property name="text">
        <string>Video Quality</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>110</y>
+        <width>69</width>
+        <height>22</height>
+       </rect>
       </property>
      </widget>
     </widget>
@@ -116,8 +126,8 @@
      <widget class="QTabWidget" name="tabWidget_2">
       <property name="geometry">
        <rect>
-        <x>-4</x>
-        <y>9</y>
+        <x>0</x>
+        <y>0</y>
         <width>751</width>
         <height>311</height>
        </rect>
@@ -134,7 +144,7 @@
          <rect>
           <x>70</x>
           <y>30</y>
-          <width>591</width>
+          <width>541</width>
           <height>31</height>
          </rect>
         </property>
@@ -192,6 +202,19 @@
         </property>
         <property name="text">
          <string>Download</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>30</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>G</string>
         </property>
        </widget>
       </widget>
