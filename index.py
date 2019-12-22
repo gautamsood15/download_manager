@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import *
 import sys
 
 from PyQt5.uic import loadUiType
+import urllib.request
 
 ui, _ = loadUiType('main.ui')  # convert UI file to python file
 
@@ -25,14 +26,22 @@ class MainApp(QMainWindow, ui):
     def Handel_Buttons(self):  # handel all buttons in the app
         self.pushButton.clicked.connect(self.Download)
 
-    def Handle_progress(self):  # calculate the progress
+    def Handle_progress(self , blocknum , blocksize , totalsize):  # calculate the progress
         pass
 
+
+    
     def Handle_Browse(self):  # enable browsing to our os , pick save location
         pass
 
     def Download(self):  # downloading any file
         print('Starting Download')
+
+        download_url = self.lineEdit.text()
+        save_location = self.lineEdit_2.text()
+
+        urllib.request.urlretrieve(download_url , save_location , self.Handle_progress)
+
 
     def Save_Browse(self):  # save location in the line edit
         pass
