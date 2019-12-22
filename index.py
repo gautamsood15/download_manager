@@ -13,12 +13,17 @@ class MainApp(QMainWindow, ui):
         super(MainApp, self).__init__(parent)
         QMainWindow.__init__(self)
         self.setupUi(self)
+        self.InitUI()
+        self.Handel_Buttons()
 
-    def InitUI(self):    # contain all ui changes in loading
+        '''InitUI and Handle_Buttons 
+        are placed here to run when the code is executed'''
+
+    def InitUI(self):  # contain all ui changes in loading
         pass
 
     def Handel_Buttons(self):  # handel all buttons in the app
-        pass
+        self.pushButton.clicked.connect(self.Download)
 
     def Handle_progress(self):  # calculate the progress
         pass
@@ -27,7 +32,7 @@ class MainApp(QMainWindow, ui):
         pass
 
     def Download(self):  # downloading any file
-        pass
+        print('Starting Download')
 
     def Save_Browse(self):  # save location in the line edit
         pass
