@@ -30,9 +30,11 @@ class MainApp(QMainWindow, ui):
         pass
 
 
-    
+
     def Handle_Browse(self):  # enable browsing to our os , pick save location
-        pass
+        save_location = QFileDialog.getSaveFileName(self, caption="Save as", directory=".", filter="All Files(*.*)")
+
+        self.lineEdit_2.setText(save_location)
 
     def Download(self):  # downloading any file
         print('Starting Download')
