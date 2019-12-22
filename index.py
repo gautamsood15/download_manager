@@ -27,8 +27,11 @@ class MainApp(QMainWindow, ui):
         self.pushButton.clicked.connect(self.Download)
 
     def Handle_progress(self , blocknum , blocksize , totalsize):  # calculate the progress
-        pass
+        readed_data = blocknum * blocksize
 
+        if totalsize > 0:
+            download_percentage = readed_data * 100 / totalsize
+            self.progressBar.setValue(download_percentage)
 
 
     def Handle_Browse(self):  # enable browsing to our os , pick save location
@@ -36,7 +39,7 @@ class MainApp(QMainWindow, ui):
 
         self.lineEdit_2.setText(save_location)
 
-    def Download(self):  # downloading any file
+    def Download(self):     # downloading any file
         print('Starting Download')
 
         download_url = self.lineEdit.text()
