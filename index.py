@@ -69,7 +69,9 @@ class MainApp(QMainWindow, ui):
 
         QMessageBox.information(self , "Donwload Completed" , "The File is Saved Successfully")
 
-
+        self.lineEdit.setText('')
+        self.lineEdit_2.setText('')
+        self.progressBar.setValue(0)
 
     def Save_Browse(self):  # save location in the line edit
         pass
