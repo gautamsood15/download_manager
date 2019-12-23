@@ -25,6 +25,7 @@ class MainApp(QMainWindow, ui):
 
     def Handel_Buttons(self):  # handel all buttons in the app
         self.pushButton.clicked.connect(self.Download)
+        self.pushButton_2.clicked.connect(self.Handle_Browse)
 
     def Handle_progress(self , blocknum , blocksize , totalsize):  # calculate the progress
         readed_data = blocknum * blocksize
@@ -32,12 +33,20 @@ class MainApp(QMainWindow, ui):
         if totalsize > 0:
             download_percentage = readed_data * 100 / totalsize
             self.progressBar.setValue(download_percentage)
+            QApplication.processEvents()            # Makes ui more responsive and not allow to freeze
+
 
 
     def Handle_Browse(self):  # enable browsing to our os , pick save location
-        save_location = QFileDialog.getSaveFileName(self, caption="Save as", directory=".", filter="All Files(*.*)")
 
-        self.lineEdit_2.setText(save_location)
+        save_location = QFileDialog.getSaveFileName(self, caption="Save as", directory=".", filter="All Files (*.*)")
+
+        print(save_location)
+
+        self.lineEdit_2.setText(str(save_location[0]))
+
+
+
 
     def Download(self):     # downloading any file
         print('Starting Download')
