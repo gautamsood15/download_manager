@@ -54,7 +54,21 @@ class MainApp(QMainWindow, ui):
         download_url = self.lineEdit.text()
         save_location = self.lineEdit_2.text()
 
-        urllib.request.urlretrieve(download_url , save_location , self.Handle_progress)
+        if download_url == '':
+            QMessageBox.warning(self , "Data Error" , "Provide a url")
+
+        if save_location == '':
+            QMessageBox.warning(self , "Data Error" , "Provide a save location")
+        else:
+            try:
+                urllib.request.urlretrieve(download_url , save_location , self.Handle_progress)
+
+            except Exception:
+                QMessageBox.warning(self , "Download Error" , "Provide a valid url")
+                return
+
+        QMessageBox.information(self , "Donwload Completed" , "The File is Saved Successfully")
+
 
 
     def Save_Browse(self):  # save location in the line edit
