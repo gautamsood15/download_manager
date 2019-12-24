@@ -5,6 +5,10 @@ import sys
 
 from PyQt5.uic import loadUiType
 import urllib.request
+import pafy
+# Make sure to install youtube-dl
+
+
 
 ui, _ = loadUiType('main.ui')  # convert UI file to python file
 
@@ -27,6 +31,11 @@ class MainApp(QMainWindow, ui):
         self.pushButton.clicked.connect(self.Download)
         self.pushButton_2.clicked.connect(self.Handle_Browse)
 
+        self.pushButton_5.clicked.connect(self.Get_Video_Data)
+
+
+
+
     def Handle_progress(self , blocknum , blocksize , totalsize):  # calculate the progress
         readed_data = blocknum * blocksize
 
@@ -40,8 +49,6 @@ class MainApp(QMainWindow, ui):
     def Handle_Browse(self):  # enable browsing to our os , pick save location
 
         save_location = QFileDialog.getSaveFileName(self, caption="Save as", directory=".", filter="All Files (*.*)")
-
-        print(save_location)
 
         self.lineEdit_2.setText(str(save_location[0]))
 
@@ -74,6 +81,41 @@ class MainApp(QMainWindow, ui):
         self.progressBar.setValue(0)
 
     def Save_Browse(self):  # save location in the line edit
+        pass
+
+
+
+##############################################################
+#################  Download Youtube Single Video
+
+    def Get_Video_Data(self):
+
+        video_url = self.lineEdit_3.text()
+
+        if video_url == '':
+            QMessageBox.warning(self , "Data Error" , "Provide a video url")
+
+        else:
+            video = pafy.new(video_url)
+            print(video.title)
+            print(video.duration)
+            print(video.author)
+            print(video.length)
+            print(video.viewcount)
+            print(video.likes)
+            print(video.dislikes)
+
+
+
+
+
+
+
+
+    def Download_Video(self):
+        pass
+
+    def Video_Progress(self):
         pass
 
 
