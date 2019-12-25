@@ -36,6 +36,7 @@ class MainApp(QMainWindow, ui):
         self.pushButton_5.clicked.connect(self.Get_Video_Data)
         self.pushButton_4.clicked.connect(self.Download_Video)
 
+        self.pushButton_7.clicked.connect(self.Playlist_Download)
 
 ################################## TAB 1 - DOWNLOAD FILES ################################################
 
@@ -130,7 +131,7 @@ class MainApp(QMainWindow, ui):
             video = pafy.new(video_url)
             video_stream = video.allstreams
             video_quality = self.comboBox.currentIndex()
-            download = video_stream[video_quality].download(filepath=save_location , callback=self.Video_Progress)
+            video_stream[video_quality].download(filepath=save_location , callback=self.Video_Progress)
 
 
 
@@ -152,8 +153,28 @@ class MainApp(QMainWindow, ui):
 ################################## TAB 2 - FULL PLAYLIST ################################################
 
 
+    def Playlist_Download(self):
+        playlist_url = self.lineEdit_5.text()
+        save_location = self.lineEdit_6.text()
+
+        if playlist_url == '':
+            QMessageBox.warning(self, "Data Error", "Provide a url")
+
+        if save_location == '':
+            QMessageBox.warning(self, "Data Error", "Provide a save location")
+
+        else:
+            playlist = pafy.get_playlist(playlist_url)
+            playlist_videos = playlist['items']
+
+            self.lcdNumber_2.display(len(playlist_videos))
 
 
+
+    def Playlist_process(self):
+        pass
+
+##########################################################################################################
 
 
 
