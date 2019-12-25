@@ -105,7 +105,7 @@ class MainApp(QMainWindow, ui):
             print(video.likes)
             print(video.dislikes)
 
-
+        
 
 
 
