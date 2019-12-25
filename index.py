@@ -109,10 +109,10 @@ class MainApp(QMainWindow, ui):
             print(video.likes)
             print(video.dislikes)
 
-            video_streams = video.streams
+            video_streams = video.allstreams
             for stream in video_streams:
                 size = humanize.naturalsize(stream.get_filesize())
-                data = " {} , {} , {} , {}".format(stream.mediatype , stream.extension , stream.quality , size)
+                data = " {} | {} | {} | {}".format(stream.mediatype , stream.extension , stream.quality , size)
                 self.comboBox.addItem(data)
 
 
@@ -127,7 +127,7 @@ class MainApp(QMainWindow, ui):
             QMessageBox.warning(self , "Data Error" , "Provide a save location")
         else:
             video = pafy.new(video_url)
-            video_stream = video.streams
+            video_stream = video.allstreams
             video_quality = self.comboBox.currentIndex()
             download = video_stream[video_quality].download(filepath=save_location , callback=self.Video_Progress)
 
