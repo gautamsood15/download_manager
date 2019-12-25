@@ -7,6 +7,7 @@ from PyQt5.uic import loadUiType
 import urllib.request
 import pafy
 # Make sure to install youtube-dl
+import humanize
 
 
 
@@ -105,11 +106,11 @@ class MainApp(QMainWindow, ui):
             print(video.likes)
             print(video.dislikes)
 
-        
-
-
-
-
+            video_streams = video.videostreams
+            for stream in video_streams:
+                size = humanize.naturalsize(stream.get_filesize())
+                data = " {} , {} , {} , {}".format(stream.mediatype , stream.extension , stream.quality , size)
+                self.comboBox.addItem(data)
 
 
     def Download_Video(self):
