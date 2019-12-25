@@ -40,6 +40,7 @@ class MainApp(QMainWindow, ui):
         self.pushButton_4.clicked.connect(self.Download_Video)
 
         self.pushButton_7.clicked.connect(self.Playlist_Download)
+        self.pushButton_8.clicked.connect(self.Playlist_Save_Browse)
 
 ################################## TAB 1 - DOWNLOAD FILES ################################################
 
@@ -192,20 +193,28 @@ class MainApp(QMainWindow, ui):
             download = current_video_stream[quality].download(callback=self.Playlist_Progress)
 
             current_video_in_download += 1
+            self.lcdNumber.display(current_video_in_download)
 
 
 
     def Playlist_Progress(self , total , received , ratio , rate , time):
-        pass
+        if total > 0:
+            download_percentage = received * 100 / total
+            self.progressBar_3.setValue(download_percentage)
+            remaining_time = round(time/60 , 2)
+
+            self.label_3.setText(str('{} minutes remaining'.format(remaining_time)))
+            QApplication.processEvents()
+
+
+
+    def Playlist_Save_Browse(self):
+        playlist_save_location = QFileDialog.getExistingDirectory(self , "Select Download Directory")
+        self.lineEdit_6.setText(playlist_save_location)
+
+
 
 ##########################################################################################################
-
-
-
-
-
-
-
 
 
 
