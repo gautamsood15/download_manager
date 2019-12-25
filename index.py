@@ -32,8 +32,9 @@ class MainApp(QMainWindow, ui):
         self.pushButton.clicked.connect(self.Download)
         self.pushButton_2.clicked.connect(self.Handle_Browse)
 
+        self.pushButton_3.clicked.connect(self.Save_Browse)
         self.pushButton_5.clicked.connect(self.Get_Video_Data)
-
+        self.pushButton_4.clicked.connect(self.Download_Video)
 
 
 
@@ -48,9 +49,7 @@ class MainApp(QMainWindow, ui):
 
 
     def Handle_Browse(self):  # enable browsing to our os , pick save location
-
         save_location = QFileDialog.getSaveFileName(self, caption="Save as", directory=".", filter="All Files (*.*)")
-
         self.lineEdit_2.setText(str(save_location[0]))
 
 
@@ -81,13 +80,17 @@ class MainApp(QMainWindow, ui):
         self.lineEdit_2.setText('')
         self.progressBar.setValue(0)
 
-    def Save_Browse(self):  # save location in the line edit
-        pass
+
 
 
 
 ##############################################################
 #################  Download Youtube Single Video
+
+    def Save_Browse(self):  # save location form os in the line edit for video
+        save_location = QFileDialog.getSaveFileName(self, caption="Save as", directory=".", filter="All Files (*.*)")
+        self.lineEdit_4.setText(str(save_location[0]))
+
 
     def Get_Video_Data(self):
 
@@ -114,9 +117,25 @@ class MainApp(QMainWindow, ui):
 
 
     def Download_Video(self):
-        pass
+        video_url = self.lineEdit_3.text()
+        save_location = self.lineEdit_4.text()
 
-    def Video_Progress(self):
+        if video_url == '':
+            QMessageBox.warning(self , "Data Error" , "Provide a url")
+
+        if save_location == '':
+            QMessageBox.warning(self , "Data Error" , "Provide a save location")
+        else:
+            video = pafy.new(video_url)
+            video_stream = video.videostreams
+            video_quality = self.comboBox.currentIndex()
+            download = video_stream[video_quality].download(filepath=save_location , callback=self.Video_Progress)
+
+
+
+
+
+    def Video_Progress(self , total , received , ratio , rate , time):
         pass
 
 
