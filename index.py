@@ -8,6 +8,9 @@ import urllib.request
 import pafy
 # Make sure to install youtube-dl
 import humanize
+import os
+from os import path
+
 
 
 
@@ -169,9 +172,30 @@ class MainApp(QMainWindow, ui):
 
             self.lcdNumber_2.display(len(playlist_videos))
 
+        os.chdir(save_location)
+        if os.path.exists(str(playlist['title'])):
+            os.chdir(str(playlist['title']))
+
+        else:
+            os.mkdir(str(playlist['title']))
+            os.chdir(str(playlist['title']))
+
+        current_video_in_download = 1
+        quality = self.comboBox_2.currentIndex()
+
+        self.lcdNumber.display(current_video_in_download)
+        QApplication.processEvents()
+
+        for video in playlist_videos:
+            current_video = video['pafy']
+            current_video_stream = current_video.videostreams
+            download = current_video_stream[quality].download(callback=self.Playlist_Progress)
+
+            current_video_in_download += 1
 
 
-    def Playlist_process(self):
+
+    def Playlist_Progress(self , total , received , ratio , rate , time):
         pass
 
 ##########################################################################################################

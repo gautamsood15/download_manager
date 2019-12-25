@@ -400,7 +400,7 @@
          <string>Start Download</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_4">
+       <widget class="QComboBox" name="comboBox_2">
         <property name="geometry">
          <rect>
           <x>220</x>
@@ -409,6 +409,26 @@
           <height>22</height>
          </rect>
         </property>
+        <item>
+         <property name="text">
+          <string>1080</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>720</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>480</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>360</string>
+         </property>
+        </item>
        </widget>
        <widget class="QLabel" name="label_4">
         <property name="geometry">
