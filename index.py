@@ -37,6 +37,8 @@ class MainApp(QMainWindow, ui):
         self.pushButton_4.clicked.connect(self.Download_Video)
 
 
+################################## TAB 1 - DOWNLOAD FILES ################################################
+
 
     def Handle_progress(self , blocknum , blocksize , totalsize):  # calculate the progress
         readed_data = blocknum * blocksize
@@ -82,10 +84,9 @@ class MainApp(QMainWindow, ui):
 
 
 
+    ################################## TAB 2 - SINGLE FILES ################################################
 
 
-##############################################################
-#################  Download Youtube Single Video
 
     def Save_Browse(self):  # save location form os in the line edit for video
         save_location = QFileDialog.getSaveFileName(self, caption="Save as", directory=".", filter="All Files (*.*)")
@@ -112,7 +113,7 @@ class MainApp(QMainWindow, ui):
             video_streams = video.allstreams
             for stream in video_streams:
                 size = humanize.naturalsize(stream.get_filesize())
-                data = " {} | {} | {} | {}".format(stream.mediatype , stream.extension , stream.quality , size)
+                data = " {} | {} | {} | {} ".format(stream.mediatype , stream.extension , stream.quality , size)
                 self.comboBox.addItem(data)
 
 
@@ -144,6 +145,23 @@ class MainApp(QMainWindow, ui):
 
             self.label_5.setText(str('{} minutes remaning').format(remaning_time))
             QApplication.processEvents()
+
+
+
+
+################################## TAB 2 - FULL PLAYLIST ################################################
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
