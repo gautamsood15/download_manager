@@ -136,7 +136,15 @@ class MainApp(QMainWindow, ui):
 
 
     def Video_Progress(self , total , received , ratio , rate , time):
-        pass
+        readed_data = received
+        if total > 0:
+            download_precentage = readed_data * 100 / total
+            self.progressBar_2.setValue(download_precentage)
+            remaning_time = round(time/60 , 2)
+
+            self.label_5.setText(str('{} minutes remaning').format(remaning_time))
+            QApplication.processEvents()
+
 
 
 def main():
