@@ -184,16 +184,17 @@ class MainApp(QMainWindow, ui):
         current_video_in_download = 1
         quality = self.comboBox_2.currentIndex()
 
-        self.lcdNumber.display(current_video_in_download)
+
         QApplication.processEvents()
 
         for video in playlist_videos:
             current_video = video['pafy']
             current_video_stream = current_video.videostreams
+            self.lcdNumber.display(current_video_in_download)
             download = current_video_stream[quality].download(callback=self.Playlist_Progress)
 
             current_video_in_download += 1
-            self.lcdNumber.display(current_video_in_download)
+           # self.lcdNumber.display(current_video_in_download)
 
 
 
