@@ -29,7 +29,8 @@ class MainApp(QMainWindow, ui):
         are placed here to run when the code is executed'''
 
     def InitUI(self):  # contain all ui changes in loading
-        pass
+        self.tabWidget.tabBar().setVisibale(False)
+        
 
     def Handel_Buttons(self):  # handel all buttons in the app
         self.pushButton.clicked.connect(self.Download)
