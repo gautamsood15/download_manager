@@ -215,7 +215,21 @@ class MainApp(QMainWindow, ui):
 
 
 
-##########################################################################################################
+
+################################## UI CHANGES METHODS ################################################
+
+    def Open_Home(self):
+        pass
+
+    def Open_Download(self):
+        pass
+
+    def Open_Youtube(self):
+        pass
+
+    def Open_Settings(self):
+        pass
+
 
 
 
