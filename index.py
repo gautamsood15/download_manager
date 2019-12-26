@@ -43,7 +43,7 @@ class MainApp(QMainWindow, ui):
         self.pushButton_8.clicked.connect(self.Playlist_Save_Browse)
 
         self.pushButton_6.clicked.connect(self.Open_Home)
-        self.ppushButton_11.clicked.connect(self.Open_Download)
+        self.pushButton_11.clicked.connect(self.Open_Download)
         self.pushButton_10.clicked.connect(self.Open_Youtube)
         self.pushButton_9.clicked.connect(self.Open_Settings)
 
@@ -228,16 +228,16 @@ class MainApp(QMainWindow, ui):
 ################################## UI CHANGES METHODS ################################################
 
     def Open_Home(self):
-        pass
+        self.tabWidget.setCurrentIndex(0)
 
     def Open_Download(self):
-        pass
+        self.tabWidget.setCurrentIndex(1)
 
     def Open_Youtube(self):
-        pass
+        self.tabWidget.setCurrentIndex(2)
 
     def Open_Settings(self):
-        pass
+        self.tabWidget.setCurrentIndex(3)
 
 
 
