@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>750</width>
-    <height>379</height>
+    <width>874</width>
+    <height>375</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>70</x>
       <y>0</y>
-      <width>751</width>
+      <width>811</width>
       <height>361</height>
      </rect>
     </property>
@@ -114,7 +114,7 @@
       </property>
       <property name="icon">
        <iconset resource="photo.qrc">
-        <normaloff>:/icons/browse_icon.png</normaloff>:/icons/browse_icon.png</iconset>
+        <normaloff>:/icons/browse.png</normaloff>:/icons/browse.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -133,8 +133,8 @@
        <rect>
         <x>-10</x>
         <y>0</y>
-        <width>751</width>
-        <height>321</height>
+        <width>781</width>
+        <height>341</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -196,7 +196,7 @@
         </property>
         <property name="icon">
          <iconset resource="photo.qrc">
-          <normaloff>:/icons/browse_icon.png</normaloff>:/icons/browse_icon.png</iconset>
+          <normaloff>:/icons/browse.png</normaloff>:/icons/browse.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -251,7 +251,7 @@
         </property>
         <property name="icon">
          <iconset resource="photo.qrc">
-          <normaloff>:/icons/save_icon.png</normaloff>:/icons/save_icon.png</iconset>
+          <normaloff>:/icons/check.png</normaloff>:/icons/check.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -372,7 +372,7 @@
         </property>
         <property name="icon">
          <iconset resource="photo.qrc">
-          <normaloff>:/icons/browse_icon.png</normaloff>:/icons/browse_icon.png</iconset>
+          <normaloff>:/icons/browse.png</normaloff>:/icons/browse.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -532,13 +532,81 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="photo.qrc">
+      <normaloff>:/icons/home.png</normaloff>:/icons/home.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="photo.qrc">
+      <normaloff>:/icons/setting.png</normaloff>:/icons/setting.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="photo.qrc">
+      <normaloff>:/icons/youtube.png</normaloff>:/icons/youtube.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="photo.qrc">
+      <normaloff>:/icons/download.png</normaloff>:/icons/download.png</iconset>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>750</width>
+     <width>874</width>
      <height>21</height>
     </rect>
    </property>
