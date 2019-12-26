@@ -63,9 +63,9 @@
       <widget class="QLabel" name="label_9">
        <property name="geometry">
         <rect>
-         <x>120</x>
+         <x>170</x>
          <y>20</y>
-         <width>221</width>
+         <width>171</width>
          <height>91</height>
         </rect>
        </property>
@@ -89,14 +89,14 @@
       <widget class="QLabel" name="label_10">
        <property name="geometry">
         <rect>
-         <x>120</x>
+         <x>170</x>
          <y>20</y>
-         <width>221</width>
+         <width>171</width>
          <height>91</height>
         </rect>
        </property>
        <property name="text">
-        <string>Download Any Type Of Files</string>
+        <string>Download Youtube Videos</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_11">
@@ -128,14 +128,14 @@
       <widget class="QLabel" name="label_12">
        <property name="geometry">
         <rect>
-         <x>120</x>
+         <x>170</x>
          <y>20</y>
-         <width>221</width>
+         <width>171</width>
          <height>91</height>
         </rect>
        </property>
        <property name="text">
-        <string>Download Any Type Of Files</string>
+        <string>Download Youtube Playlists</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_13">
@@ -167,14 +167,14 @@
       <widget class="QLabel" name="label_14">
        <property name="geometry">
         <rect>
-         <x>120</x>
+         <x>170</x>
          <y>20</y>
-         <width>221</width>
+         <width>171</width>
          <height>91</height>
         </rect>
        </property>
        <property name="text">
-        <string>Download Any Type Of Files</string>
+        <string>App Theme and Settings</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_15">
