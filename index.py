@@ -29,8 +29,8 @@ class MainApp(QMainWindow, ui):
         are placed here to run when the code is executed'''
 
     def InitUI(self):  # contain all ui changes in loading
-        self.tabWidget.tabBar().setVisibale(False)
-        
+        self.tabWidget.tabBar().setVisible(False)
+
 
     def Handel_Buttons(self):  # handel all buttons in the app
         self.pushButton.clicked.connect(self.Download)
@@ -168,6 +168,7 @@ class MainApp(QMainWindow, ui):
 
 
     def Playlist_Download(self):
+        global playlist_videos
         playlist_url = self.lineEdit_5.text()
         save_location = self.lineEdit_6.text()
 
