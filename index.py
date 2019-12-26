@@ -42,6 +42,15 @@ class MainApp(QMainWindow, ui):
         self.pushButton_7.clicked.connect(self.Playlist_Download)
         self.pushButton_8.clicked.connect(self.Playlist_Save_Browse)
 
+        self.pushButton_6.clicked.connect(self.Open_Home)
+        self.ppushButton_11.clicked.connect(self.Open_Download)
+        self.pushButton_10.clicked.connect(self.Open_Youtube)
+        self.pushButton_9.clicked.connect(self.Open_Settings)
+
+
+
+
+
 ################################## TAB 1 - DOWNLOAD FILES ################################################
 
 
