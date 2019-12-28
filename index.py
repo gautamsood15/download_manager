@@ -168,7 +168,7 @@ class MainApp(QMainWindow, ui):
 
 
     def Playlist_Download(self):
-        
+
         playlist_url = self.lineEdit_5.text()
         save_location = self.lineEdit_6.text()
 
@@ -200,12 +200,11 @@ class MainApp(QMainWindow, ui):
 
         for video in playlist_videos:
             current_video = video['pafy']
-            current_video_stream = current_video.videostreams
+            current_video_stream = current_video.allstreams
             self.lcdNumber.display(current_video_in_download)
-            download = current_video_stream[quality].download(callback=self.Playlist_Progress)
-
+            current_video_stream[quality].download(callback=self.Playlist_Progress)
             current_video_in_download += 1
-           # self.lcdNumber.display(current_video_in_download)
+
 
 
 
