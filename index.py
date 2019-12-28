@@ -168,7 +168,7 @@ class MainApp(QMainWindow, ui):
 
 
     def Playlist_Download(self):
-        global playlist_videos
+        
         playlist_url = self.lineEdit_5.text()
         save_location = self.lineEdit_6.text()
 
