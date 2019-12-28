@@ -257,16 +257,24 @@ class MainApp(QMainWindow, ui):
 
 
     def Apply_QDark_Style(self):
-        pass
+        style = open('themes/qdark.css', 'r')
+        style = style.read()
+        self.setStyleSheet(style)
 
     def Apply_DarkGray_Style(self):
-        pass
+        style = open('themes/qdarkgrey.css', 'r')
+        style = style.read()
+        self.setStyleSheet(style)
 
     def Apply_Classic_Style(self):
-        pass
+        style = open('themes/classic.css', 'r')
+        style = style.read()
+        self.setStyleSheet(style)
 
     def Apply_DarkBlue_Style(self):
-        pass
+        style = open('themes/darkblue.css', 'r')
+        style = style.read()
+        self.setStyleSheet(style)
 
 
 

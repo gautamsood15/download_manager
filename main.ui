@@ -821,7 +821,7 @@
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="text">
-       <string/>
+       <string>DARK ORANGE</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_13">
@@ -837,7 +837,7 @@
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="text">
-       <string/>
+       <string>DARK GREY</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_14">
@@ -853,7 +853,7 @@
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="text">
-       <string/>
+       <string>DARK BLUE</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_7">
@@ -887,7 +887,7 @@
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="text">
-       <string/>
+       <string>DARK</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_16">
@@ -903,7 +903,7 @@
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="text">
-       <string/>
+       <string>DEFAULT</string>
       </property>
      </widget>
     </widget>
