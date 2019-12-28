@@ -240,6 +240,7 @@ class MainApp(QMainWindow, ui):
 
     def Open_Settings(self):
         self.tabWidget.setCurrentIndex(3)
+        
 
 
 
