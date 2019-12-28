@@ -314,6 +314,15 @@ class MainApp(QMainWindow, ui):
         self.box_animation3 = box_animation3
 
 
+    def Move_Box_4(self):
+        box_animation4 = QPropertyAnimation(self.groupBox_4 , b"geometry")
+        box_animation4.setDuration(1000)  #1 second
+        box_animation4.setStartValue(QRect(0,0,0,0))
+        box_animation4.setEndValue(QRect(430 , 170 , 351 , 131))
+        box_animation4.start()
+        self.box_animation4 = box_animation4
+
+
 
 
 
