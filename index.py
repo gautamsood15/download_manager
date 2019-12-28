@@ -244,6 +244,20 @@ class MainApp(QMainWindow, ui):
 
 
 
+################################## APP THEMES ################################################
+
+    def Apply_DarkOrange_Style(self):
+        pass
+
+    def Apply_QDark_Style(self):
+        pass
+
+    def Apply_DarkGray_Style(self):
+        pass
+
+
+
+
 
 
 def main():
