@@ -48,7 +48,8 @@ class MainApp(QMainWindow, ui):
         self.pushButton_10.clicked.connect(self.Open_Youtube)
         self.pushButton_9.clicked.connect(self.Open_Settings)
 
-
+        self.pushButton_12.clicked.connect(self.Apply_DarkOrange_Style)
+        
 
 
 
@@ -246,7 +247,10 @@ class MainApp(QMainWindow, ui):
 ################################## APP THEMES ################################################
 
     def Apply_DarkOrange_Style(self):
-        pass
+        style = open('themes/darkorange.css' , 'r')
+        style  = style.read()
+        self.setStyleSheet(style)
+
 
     def Apply_QDark_Style(self):
         pass
