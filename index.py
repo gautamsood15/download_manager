@@ -31,6 +31,12 @@ class MainApp(QMainWindow, ui):
     def InitUI(self):  # contain all ui changes in loading
         self.tabWidget.tabBar().setVisible(False)
 
+        self.Move_Box_1()
+        self.Move_Box_2()
+        self.Move_Box_3()
+        self.Move_Box_4()
+
+
 
     def Handel_Buttons(self):  # handel all buttons in the app
         self.pushButton.clicked.connect(self.Download)
@@ -250,6 +256,7 @@ class MainApp(QMainWindow, ui):
 
 ################################## APP THEMES ################################################
 
+
     def Apply_DarkOrange_Style(self):
         style = open('themes/darkorange.css' , 'r')
         style  = style.read()
@@ -275,6 +282,12 @@ class MainApp(QMainWindow, ui):
         style = open('themes/darkblue.css', 'r')
         style = style.read()
         self.setStyleSheet(style)
+
+
+
+
+############################### APP ANIMATION ################################################
+
 
 
 
