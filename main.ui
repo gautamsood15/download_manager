@@ -23,7 +23,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>80</x>
       <y>0</y>
       <width>801</width>
       <height>361</height>
@@ -827,7 +827,7 @@
      <widget class="QPushButton" name="pushButton_13">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>190</x>
         <y>150</y>
         <width>121</width>
         <height>71</height>
@@ -843,7 +843,7 @@
      <widget class="QPushButton" name="pushButton_14">
       <property name="geometry">
        <rect>
-        <x>640</x>
+        <x>340</x>
         <y>150</y>
         <width>121</width>
         <height>71</height>
@@ -872,6 +872,38 @@
       </property>
       <property name="text">
        <string> SET APPLICATION THEME</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_15">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>150</y>
+        <width>121</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_16">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>150</y>
+        <width>121</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>

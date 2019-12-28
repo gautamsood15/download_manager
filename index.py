@@ -49,7 +49,8 @@ class MainApp(QMainWindow, ui):
         self.pushButton_9.clicked.connect(self.Open_Settings)
 
         self.pushButton_12.clicked.connect(self.Apply_DarkOrange_Style)
-        
+        self.pushButton_13.clicked.connect(self.Apply_DarkGray_Style)
+        self.pushButton_14.clicked.connect(self.Apply_QDark_Style)
 
 
 
@@ -258,7 +259,11 @@ class MainApp(QMainWindow, ui):
     def Apply_DarkGray_Style(self):
         pass
 
+    def Apply_classic_Style(self):
+        pass
 
+    def Apply_DarkBlue_Style(self):
+        pass
 
 
 
