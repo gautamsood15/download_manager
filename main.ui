@@ -41,7 +41,7 @@
      <bool>false</bool>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
@@ -371,6 +371,9 @@
         <height>26</height>
        </size>
       </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
@@ -390,7 +393,7 @@
        <cursorShape>ArrowCursor</cursorShape>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -459,6 +462,9 @@
           <height>26</height>
          </size>
         </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
        </widget>
        <widget class="QProgressBar" name="progressBar_2">
         <property name="geometry">
@@ -519,6 +525,9 @@
           <width>26</width>
           <height>26</height>
          </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
         </property>
        </widget>
        <widget class="QLabel" name="label_2">
@@ -646,6 +655,9 @@
           <width>26</width>
           <height>26</height>
          </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
         </property>
        </widget>
        <widget class="QPushButton" name="pushButton_7">
@@ -927,6 +939,9 @@
      <iconset resource="photo.qrc">
       <normaloff>:/icons/home.png</normaloff>:/icons/home.png</iconset>
     </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButton_9">
     <property name="geometry">
@@ -946,6 +961,9 @@
     <property name="icon">
      <iconset resource="photo.qrc">
       <normaloff>:/icons/setting.png</normaloff>:/icons/setting.png</iconset>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_10">
@@ -967,6 +985,9 @@
      <iconset resource="photo.qrc">
       <normaloff>:/icons/youtube.png</normaloff>:/icons/youtube.png</iconset>
     </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButton_11">
     <property name="geometry">
@@ -986,6 +1007,15 @@
     <property name="icon">
      <iconset resource="photo.qrc">
       <normaloff>:/icons/download.png</normaloff>:/icons/download.png</iconset>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>
