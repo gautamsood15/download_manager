@@ -331,7 +331,7 @@ def main():
     app = QApplication(sys.argv)  # application can have many windows, this is an object of QApplication
     window = MainApp()
 
-    window.setWindowTitle('Download Manager')
+    window.setWindowTitle('Python Get')
     window.setWindowIcon(QIcon('icons/app_icon.png'))
 
     window.show()
